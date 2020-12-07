@@ -7,24 +7,30 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { messages } from "../../Constants/Strings";
 import { Button } from "@material-ui/core";
+import { useDispatch, useSelector } from "react-redux";
+import { GraphActions } from "../../Redux/Graph/action";
+import { CombineReducerType } from "../../Redux/reducer";
 
 const useStyles = makeStyles((theme: Theme) => 
   createStyles({
     formControl: {
-      margin: theme.spacing(1),
+      // margin: theme.spacing(1),
       minWidth: 200,
     },
     selectEmpty: {
-      marginTop: theme.spacing(2),
+      // marginTop: theme.spacing(2),
     },
   }),
 );
 
 const DisplayRecharts: React.FC = () => {
-  const [country, setCountry] = useState<string>("");
-
+  const dispatch = useDispatch();
+  const [country, setCountry] = useState<string>('');
+  const selectedModel = useSelector((state: CombineReducerType) => state.country.selectedCountryData)
+ 
   const changeHandler = (e: any) => {
     setCountry(e.target.value)
+    dispatch(GraphActions.SelectCountry(e.target.value))
   }
 
   const classes = useStyles();
@@ -49,7 +55,7 @@ const DisplayRecharts: React.FC = () => {
             <MenuItem value=" China">China</MenuItem>
           </Select>
 
-          <Chart country={country}/>
+          <Chart model={selectedModel}/>
 
           <button>
             <span>グラフを一覧へ追加</span>

@@ -1,0 +1,33 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "graphs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "Country",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Population",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "graphs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "Country",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Year",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
