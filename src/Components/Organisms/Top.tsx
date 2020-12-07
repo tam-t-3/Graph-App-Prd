@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { messages } from "../../Constants/Strings";
+import DisplayRecharts from "../Molecules/DisplayRecharts";
 
 const Top: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Top: React.FC = () => {
         </LayoutExplanation>
 
         <LayoutChart>
-          <p>ここにReachartsを表示</p>
+          <DisplayRecharts />
         </LayoutChart>
       </div>
     </LayoutTop>
