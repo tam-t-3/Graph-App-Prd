@@ -1,0 +1,58 @@
+import React from "react";
+import Button from "@material-ui/core/Button";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import { navigation } from "../../Constants/Strings";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const AppBarMenu = () => {
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+  return (
+    <LayoutMenu>
+      <Button
+        style={{color: "white"}}
+        aria-controls="simple-meny"
+        aria-haspopup="true"
+        >
+          {navigation.menu}
+        </Button>
+
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <Link style={{ textDecoration: "none", color: "black"}} to="signup">
+            <MenuItem onClick={handleClose}>{navigation.signUp}</MenuItem>
+          </Link>
+
+          <Link style={{ textDecoration: "none", color: "black"}} to="signup">
+            <MenuItem onClick={handleClose}>{navigation.logIn}</MenuItem>
+          </Link>
+
+          {/* Authの導入時に変更する */}
+          {/* <MenuItem onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem> */}
+          <MenuItem>{navigation.logOut}</MenuItem>
+        </Menu>
+
+    </LayoutMenu>
+  )
+}
+
+export default AppBarMenu;
+
+const LayoutMenu = styled.div`
+  text-decoration: none;
+`;
