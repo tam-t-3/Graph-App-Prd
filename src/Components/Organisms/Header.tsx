@@ -5,7 +5,7 @@ import {
   Theme } from "@material-ui/core/styles";
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
-import AppBarMenu from "../Atoms/AppBarMenu";
+import AppBarMenu from "../Atoms/AppBarMenu/AppBarMenu";
 import { aboutTxt } from "../../Constants/Strings";
 import styled from "styled-components";
 import Toolbar from '@material-ui/core/Toolbar';
@@ -34,6 +34,7 @@ const ButtonAppBar = () => {
           <Typography variant="h6" className={classes.title}>
             <TitleLayout>{aboutTxt.appName}</TitleLayout>
           </Typography>
+          <AppBarMenu />
         </Toolbar>
       </AppBar>
     </div>

@@ -6,10 +6,10 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { messages } from "../../Constants/Strings";
-import { Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
 import { CombineReducerType } from "../../Redux/reducer";
+import Button from "../Atoms/AppBarMenu/Button";
 
 const useStyles = makeStyles((theme: Theme) => 
   createStyles({
@@ -33,6 +33,15 @@ const DisplayRecharts: React.FC = () => {
     dispatch(GraphActions.SelectCountry(e.target.value))
   }
 
+  const submitHandler = () => {
+    if (country !== "") {
+      dispatch(GraphActions.AddCountry(country))
+    } else {
+      alert("地域を選択して下さい");
+      return false;
+    }
+  };
+
   const classes = useStyles();
 
   return (
@@ -52,15 +61,19 @@ const DisplayRecharts: React.FC = () => {
           >
             <MenuItem value="">地域を選択する</MenuItem>
             <MenuItem value="Japan">Japan</MenuItem>
-            <MenuItem value=" China">China</MenuItem>
+            <MenuItem value="China">China</MenuItem>
           </Select>
 
           <Chart model={selectedModel}/>
 
-          <button>
+          <Button clickHandler={submitHandler}>
             <span>グラフを一覧へ追加</span>
-          </button>
+          </Button>
         </FormControl>
+
+        <div>
+          
+        </div>
       </div>
     </div>
   )

@@ -1,13 +1,14 @@
 import { takeEvery, put, call, select } from "redux-saga/effects";
-import { SELECTCOUNTRY } from "./types";
+import { SELECTCOUNTRY, ADDCOUNTRY, LOAD } from "./types";
 import { GraphActionType, GraphActions } from "./action";
 import { db, } from "../../Firebase/base";
 import { CombineReducerType } from "../reducer";
 
-// type FirebaseDoc = firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>
+//type FirebaseDoc = firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>
 
 function* graphSaga() {
   yield takeEvery(SELECTCOUNTRY, calcSelectCountry);
+  yield takeEvery(ADDCOUNTRY, calcAddCountry);
 }
 
 /**
@@ -33,5 +34,20 @@ const fetch = async (country: string) => {
   const data = await colRef.get()
   return data
 };
+
+/**
+ * Add Country
+ */
+
+ function* calcAddCountry(action: GraphActionType) {
+  // @ts-ignore: Unreachable code error
+  const country = action.payload.country
+  const snapshot = yield call(fetch, country);
+  const response = snapshot.docs.map((doc: any ) => doc.data())
+
+  // Firebase上に登録するyieldをここに追加予定
+
+  yield put(GraphActions.SelectUpdate(country, response));
+ }
 
 export default graphSaga;

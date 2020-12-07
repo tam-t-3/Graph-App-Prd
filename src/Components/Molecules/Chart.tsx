@@ -18,13 +18,21 @@ const Chart: React.FC<Props> = ({ country, model }) => {
           width={600}
           height={300}
           data={model}
-          margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+          margin={{ top: 5, right: 20, bottom: 5, left: 50 }}>
             <Line type="monotone" dataKey="Population" stroke="#8884d8" />
             <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
             <XAxis dataKey="Year" />
-            <YAxis />
+            <YAxis dataKey="Population"/>
             <Tooltip />
         </LineChart>
+        {
+          country && (
+            <div>
+              <h2>{country}</h2>
+              <button>DELETE</button>
+            </div>
+          )
+        }
       </StyleChart>
     </div>
   )
