@@ -2,6 +2,7 @@ import React from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
+import { GraphActions } from "../../Redux/Graph/action";
 
 type Props = {
   country?: string,
@@ -10,6 +11,10 @@ type Props = {
 
 const Chart: React.FC<Props> = ({ country, model }) => {
   const dispatch = useDispatch();
+
+  const deleteHandler = () => {
+    if (country) dispatch(GraphActions.DelCountry(country))
+  }
 
   return (
     <div>
@@ -29,7 +34,7 @@ const Chart: React.FC<Props> = ({ country, model }) => {
           country && (
             <div>
               <h2>{country}</h2>
-              <button>DELETE</button>
+              <button onClick={deleteHandler}>DELETE</button>
             </div>
           )
         }

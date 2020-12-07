@@ -1,4 +1,4 @@
-import { SELECTCOUNTRY, SELECT_UPDATE, GraphModel, ADDCOUNTRY, LOAD, SUCCESS_LOAD } from "./types";
+import { SELECTCOUNTRY, SELECT_UPDATE, GraphModel, ADDCOUNTRY, LOAD, SUCCESS_LOAD, DELCOUNTRY, DELETE_UPDATE } from "./types";
 
 type CountriesType = { [countryName: string]: GraphModel[] };
 
@@ -22,6 +22,20 @@ export const GraphActions = {
       country
     },
   }),
+  DelCountry: (country: string) => ({
+    type: DELCOUNTRY,
+    payload: {
+      country
+    },
+  }),
+  DeleteUpdate: (values: CountriesType) => {
+    return {
+      type: DELETE_UPDATE,
+      payload: {
+        values,
+      },
+    };
+  },
   Load: () => {
     return {
       type: LOAD,
@@ -44,3 +58,5 @@ export type GraphActionType =
  | ReturnType<typeof GraphActions.AddCountry>
  | ReturnType<typeof GraphActions.Load>
  | ReturnType<typeof GraphActions.LoadSuccess>
+ | ReturnType<typeof GraphActions.DelCountry>
+ | ReturnType<typeof GraphActions.DeleteUpdate>

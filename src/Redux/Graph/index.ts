@@ -1,5 +1,5 @@
 import { Reducer } from "react";
-import { GraphState, SELECT_UPDATE, SELECTCOUNTRY, ADDCOUNTRY, SUCCESS_LOAD } from "./types";
+import { GraphState, SELECT_UPDATE, SELECTCOUNTRY, ADDCOUNTRY, SUCCESS_LOAD, DELETE_UPDATE } from "./types";
 import { GraphActionType } from "./action";
 
 const initState: GraphState = {
@@ -31,13 +31,18 @@ const graphReducer: Reducer<GraphState, GraphActionType> = (
       return {
         ...state,
         countries: Object.assign(state.countries, { [countryName]: values})
-      };
+      }
     case SUCCESS_LOAD:
       return {
         ...state,
         countries: Object.assign(state.countries, {
           [action.payload.countryName]: action.payload.countries
         })
+      }
+    case DELETE_UPDATE:
+      return {
+        ...state,
+        countries: action.payload.values
       }
       default:
       return state;
