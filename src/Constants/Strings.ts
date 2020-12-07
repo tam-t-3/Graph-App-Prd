@@ -6,7 +6,7 @@ export const navigation = {
 };
 
 export const aboutTxt = {
-  appName: "Popuraph"
+  appName: "Population-Graph-App"
 };
 
 export const messages = {
