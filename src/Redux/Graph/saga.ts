@@ -1,5 +1,5 @@
 import { takeEvery, put, call, select } from "redux-saga/effects";
-import { SELECTCOUNTRY, ADDCOUNTRY, LOAD } from "./types";
+import { SELECTCOUNTRY, ADDCOUNTRY, LOAD, DELCOUNTRY } from "./types";
 import { GraphActionType, GraphActions } from "./action";
 import { db, } from "../../Firebase/base";
 import { CombineReducerType } from "../reducer";
@@ -9,6 +9,7 @@ import { CombineReducerType } from "../reducer";
 function* graphSaga() {
   yield takeEvery(SELECTCOUNTRY, calcSelectCountry);
   yield takeEvery(ADDCOUNTRY, calcAddCountry);
+  yield takeEvery(DELCOUNTRY, calcDelCountry);
 }
 
 /**
@@ -49,5 +50,18 @@ const fetch = async (country: string) => {
 
   yield put(GraphActions.SelectUpdate(country, response));
  }
+
+/**
+ * 地域データの削除
+ */
+
+function* calcDelCountry(action: GraphActionType) {
+  // @ts-ignore: Unreachable code error
+  const country = action.payload.country;
+  const countries = yield select( (state: CombineReducerType) => state.country.countries)
+  delete countries[country]
+
+  yield put(GraphActions.DeleteUpdate(countries))
+}
 
 export default graphSaga;
