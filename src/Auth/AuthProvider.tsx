@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { User } from "firebase/analytics/dist/index.cjs";
+// import { User } from "firebase";
 import { app } from "../Firebase/base";
 import { history } from "../App";
 import { db } from "../Firebase/base";
@@ -11,7 +11,7 @@ type Signup = (email: string, password: string) => Promise<void>;
 type Context = {
   login: Login;
   signup: Signup;
-  currentUser: User | null;
+  currentUser: any | null;
 };
 
 // contextの作成
@@ -26,7 +26,7 @@ export type Props = {
 };
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [currentUser, setCurrentUser] = useState<any | null>(null);
   const dispatch = useDispatch();
 
   // ユーザーをログインさせる関数
