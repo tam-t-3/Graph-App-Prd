@@ -22,3 +22,8 @@ export type GraphModel = {
   Year: number,
   docId: string,
 }
+
+export type UserDataType = {
+  id: string,
+  countries: string[]
+}
