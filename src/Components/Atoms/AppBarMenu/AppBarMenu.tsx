@@ -5,6 +5,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import { navigation } from "../../../Constants/Strings";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { app } from "../../../Firebase/base";
 
 const AppBarMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -43,9 +44,7 @@ const AppBarMenu = () => {
             <MenuItem onClick={handleClose}>{navigation.logIn}</MenuItem>
           </Link>
 
-          {/* Authの導入時に変更する */}
-          {/* <MenuItem onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem> */}
-          <MenuItem>{navigation.logOut}</MenuItem>
+          <MenuItem onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem>
         </Menu>
 
     </LayoutMenu>
