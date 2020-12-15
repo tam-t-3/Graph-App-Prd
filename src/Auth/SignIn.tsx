@@ -3,7 +3,7 @@ import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
 
-const Login = () => {
+const SignIn = () => {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,10 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="c-section-container">
+      <h1 className="u-text-center u-text__headline">Log in</h1>
+      
+      <div className="module-spacer--medium"/>
       <form onSubmit={handleSubmit}>
         <label>
           <TextField fullWidth={true} id="standard-basic" label="Email"
@@ -42,11 +45,15 @@ const Login = () => {
             placeholder="パスワードを入力してください"
             onChange={handlePassword}
           />
-      </label>
-      <Button size="small" variant="outlined" type="submit">Log in</Button>
+        </label>
+      <div className="module-spacer--medium"/>
+
+      <div className="center">
+        <Button size="small" variant="outlined" type="submit">Log in</Button>
+      </div>
     </form>
   </div>
   )
 }
 
-export default withRouter(Login);
+export default withRouter(SignIn);

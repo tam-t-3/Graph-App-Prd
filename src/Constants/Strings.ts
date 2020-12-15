@@ -15,6 +15,6 @@ export const messages = {
     explanation: "プルダウンで選択した地域のグラフが表示されます",
     select: "地域を選択してください",
   },
-  appName: "Popuraph",
+  appName: "",
   copyRight: " 2020 Takashi Tamura",
 } 

@@ -40,6 +40,8 @@ padding-bottom: 80px;
 
 const LayoutExplanation = styled.p`
 margin: 0;
+text-align: center;
+padding-top: 32px;
 `;
 
 const LayoutChart = styled.div`
