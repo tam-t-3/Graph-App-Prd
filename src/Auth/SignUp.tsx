@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import  { Button, TextField } from "@material-ui/core";
 import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
+import { navigation } from "../Constants/Strings";
 
 const SignUp: React.FC = () => {
   const { signup } = useContext(AuthContext);
@@ -23,7 +24,10 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="c-section-container">
+      <h1 className="u-text-center u-text__headline">SignUp</h1>
+      <div className="module-spacer--medium"/>
+
       <form onSubmit={handleSubmit}>
         <label>
           <TextField fullWidth={true} id="standard-basic" label="Email"
@@ -43,7 +47,12 @@ const SignUp: React.FC = () => {
           placeholder="パスワードを設定してください"
           />
         </label>
-        <Button size="small" variant="outlined" type="submit">ユーザー登録する</Button>
+
+        <div className="module-spacer--medium"/>
+
+        <div className="center">
+  <Button size="small" variant="outlined" type="submit">{navigation.signUp}</Button>
+        </div>
     </form>
   </div>
   )

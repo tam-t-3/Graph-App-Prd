@@ -19,7 +19,7 @@ const AppBarMenu = () => {
   };
 
   return (
-    <LayoutMenu>
+    <div >
       <Button
         style={{color: "white"}}
         aria-controls="simple-meny"
@@ -46,8 +46,7 @@ const AppBarMenu = () => {
 
           <MenuItem onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem>
         </Menu>
-
-    </LayoutMenu>
+    </div>
   )
 }
 

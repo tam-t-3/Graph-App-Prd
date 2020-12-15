@@ -1,0 +1,35 @@
+/*********** Module Spacer ***********/
+.module-spacer--extra-small {
+  height: 12px
+}
+.module-spacer--small {
+  height: 20px
+}
+.module-spacer--medium {
+  height: 32px
+}
+
+/*********** Section ***********/
+.c-section-container {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 1rem;
+  height: auto;
+  width: calc(100% - 2rem);
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*********** Footer ***********/
+.u-text-center {
+  text-align: center;
+}
+
+.u-text__headline {
+  /* color: #4dd0e1; */
+  font-size: 1.563rem;
+  margin: 0 auto 1rem auto;
+}

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Route } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-import Login from "./Login";
+import Login from "./SignIn";
 
 const PrivateRoute = ({ ...options }) => {
   const { currentUser } = useContext(AuthContext);
