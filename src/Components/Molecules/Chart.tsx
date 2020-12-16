@@ -1,8 +1,9 @@
 import React from "react";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
+import { sp, tab, pc } from "../../media";
 
 type Props = {
   country?: string,
@@ -18,17 +19,19 @@ const Chart: React.FC<Props> = ({ country, model }) => {
 
   return (
     <StyleChart>
-      <LineChart
-        width={600}
-        height={300}
-        data={model}
-        margin={{ top: 32, right: 20, bottom: 16, left: 90 }}>
-          <Line type="monotone" dataKey="Population" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <XAxis dataKey="Year" />
-          <YAxis dataKey="Population"/>
-          <Tooltip />
-      </LineChart>
+        <ResponsiveContainer aspect={2}>
+          <LineChart
+ 
+            height={300}
+            data={model}
+            margin={{ top: 32, right: 40, bottom: 0, left: 56 }}>
+              <Line type="monotone" dataKey="Population" stroke="#8884d8" />
+              <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+              <XAxis dataKey="Year" />
+              <YAxis dataKey="Population"/>
+              <Tooltip />
+          </LineChart>
+        </ResponsiveContainer>
 
       {
         country && (
@@ -43,16 +46,24 @@ const Chart: React.FC<Props> = ({ country, model }) => {
 }
 
 const StyleChart = styled.div`
-  width: 700px;
   margin: 32px auto;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
   border-radius: 8px;
+  ${sp`
+  `}
+  ${tab`
+    width: 600px;
+
+  `}
+  ${pc`
+    width: 800px;
+  `}
 `;
 
 const LayoutChartName = styled.div`
-  marign-top: 16px;
+  marign-top: 8px;
   text-align: center;
-  padding: 32px;
+  padding: 16px;
 `;
 
 export default Chart;

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
       </S.StyledCopy>
 
       <S.StyledIcon
-        href="https://twitter.com/@20_tamura_t"
+        href="https://twitter.com/@takashi_t_20"
         target="_blank"
       >
         <FaIconTemplate iconName={faTwitter}/>

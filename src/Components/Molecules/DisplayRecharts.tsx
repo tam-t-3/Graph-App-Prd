@@ -10,6 +10,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
 import { CombineReducerType } from "../../Redux/reducer";
 import Button from "../Atoms/AppBarMenu/Button";
+import { sp, tab, pc } from "../../media";
+import styled from "styled-components";
+
 
 const useStyles = makeStyles((theme: Theme) => 
   createStyles({
@@ -46,7 +49,6 @@ const DisplayRecharts: React.FC = () => {
 
   return (
     <div className="App">
-      <div>
         <FormControl className={classes.formControl}>
           <InputLabel
             id="demo-simple-select-label">
@@ -63,20 +65,24 @@ const DisplayRecharts: React.FC = () => {
             <MenuItem value="Japan">Japan</MenuItem>
             <MenuItem value="China">China</MenuItem>
           </Select>
-
-          <Chart model={selectedModel}/>
+          
+          <LayoutChart>
+            <Chart model={selectedModel}/>
+          </LayoutChart>
 
           <Button clickHandler={submitHandler}>
             <span>グラフを一覧へ追加</span>
           </Button>
-        </FormControl>
-
-        <div>
-          
-        </div>
-      </div>
+        </FormControl>        
     </div>
   )
 }
+
+const LayoutChart = styled.div`
+  ${sp`
+    width: 450px;
+    box-sizing: boder-box;
+  `}
+`;
 
 export default DisplayRecharts;
