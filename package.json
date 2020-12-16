@@ -25,6 +25,8 @@
     "@types/redux-saga": "^0.10.5",
     "@types/styled-components": "^5.1.4",
     "firebase": "^8.1.2",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.0",
     "firebase-tools": "^8.17.0",
     "material-ui": "^0.20.2",
     "react": "^17.0.1",
