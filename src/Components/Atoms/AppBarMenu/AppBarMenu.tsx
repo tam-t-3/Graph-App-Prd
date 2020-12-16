@@ -4,7 +4,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { navigation } from "../../../Constants/Strings";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { app } from "../../../Firebase/base";
 
 const AppBarMenu = () => {
@@ -51,7 +50,3 @@ const AppBarMenu = () => {
 }
 
 export default AppBarMenu;
-
-const LayoutMenu = styled.div`
-  text-decoration: none;
-`;

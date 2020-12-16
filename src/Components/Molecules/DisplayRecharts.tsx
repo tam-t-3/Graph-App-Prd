@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
 import { CombineReducerType } from "../../Redux/reducer";
 import Button from "../Atoms/AppBarMenu/Button";
-import { sp, tab, pc } from "../../media";
+import { sp } from "../../media";
 import styled from "styled-components";
 
 
