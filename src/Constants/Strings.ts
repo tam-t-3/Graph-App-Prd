@@ -6,7 +6,9 @@ export const navigation = {
 };
 
 export const aboutTxt = {
-  appName: "Population-Graph-App"
+  appName: "Population-Graph-App",
+  mail: "メールアドレス",
+  password: "パスワード"
 };
 
 export const messages = {

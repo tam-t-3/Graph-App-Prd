@@ -29,7 +29,7 @@ const SignIn = () => {
       <div className="module-spacer--medium"/>
       <form onSubmit={handleSubmit}>
         <label>
-          <TextField fullWidth={true} id="standard-basic" label="Email"
+          <TextField fullWidth={true} label="Email"
             name="email"
             type="email"
             value={email}
@@ -38,7 +38,7 @@ const SignIn = () => {
           />
         </label>
         <label>
-          <TextField fullWidth={true} id="standard-basic" label="Password"
+          <TextField fullWidth={true} label="Password"
             name="password"
             type="password"
             value={password}
