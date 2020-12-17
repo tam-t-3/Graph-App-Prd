@@ -50,6 +50,8 @@ const StyleChart = styled.div`
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
   border-radius: 8px;
   ${sp`
+    width: 450px;
+    box-sizing: boder-box;
   `}
   ${tab`
     width: 600px;

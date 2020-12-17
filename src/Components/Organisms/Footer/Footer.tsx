@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import * as S from "./style";
 import { messages } from "../../../Constants/Strings";
 import FaIconTemplate from "../../Atoms/FaIcons/FaIconTemplate";

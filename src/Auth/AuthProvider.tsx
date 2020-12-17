@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import { User } from "firebase";
 import { app } from "../Firebase/base";
 import { history } from "../App";
 import { db } from "../Firebase/base";
-import { useDispatch } from "react-redux";
 
 type Login = (email: string, password: string) => Promise<void>;
 type Signup = (email: string, password: string) => Promise<void>;
@@ -27,7 +25,6 @@ export type Props = {
 
 export const AuthProvider: React.FC<Props> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<any | null>(null);
-  const dispatch = useDispatch();
 
   // ユーザーをログインさせる関数
   const login = async (email: string, password: string) => {
