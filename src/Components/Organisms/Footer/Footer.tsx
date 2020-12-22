@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./style";
 import { messages } from "../../../Constants/Strings";
 import FaIconTemplate from "../../Atoms/FaIcons/FaIconTemplate";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer: React.FC = () => {  

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
+import { navigation, aboutTxt } from "../Constants/Strings";
 
 const SignIn = () => {
   const { login } = useContext(AuthContext);
@@ -24,32 +25,32 @@ const SignIn = () => {
 
   return (
     <div className="c-section-container">
-      <h1 className="u-text-center u-text__headline">Log in</h1>
+      <h1 className="u-text-center u-text__headline">{navigation.logIn}</h1>
       
       <div className="module-spacer--medium"/>
       <form onSubmit={handleSubmit}>
         <label>
-          <TextField fullWidth={true} label="Email"
+          <TextField fullWidth={true} label={aboutTxt.mail} style={{fontSize: "16px"}}
             name="email"
             type="email"
             value={email}
             onChange={handleEmail}
-            placeholder="メールアドレスを入力してください"
+            placeholder="メールアドレス"
           />
         </label>
         <label>
-          <TextField fullWidth={true} label="Password"
+          <TextField fullWidth={true} label={aboutTxt.password}
             name="password"
             type="password"
             value={password}
-            placeholder="パスワードを入力してください"
+            placeholder="パスワード"
             onChange={handlePassword}
           />
         </label>
       <div className="module-spacer--medium"/>
 
       <div className="center">
-        <Button size="small" variant="outlined" type="submit">Log in</Button>
+        <Button size="small" variant="outlined" type="submit">{navigation.logIn}</Button>
       </div>
     </form>
   </div>

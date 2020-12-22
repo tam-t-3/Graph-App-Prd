@@ -41,7 +41,8 @@ padding-bottom: 80px;
 const LayoutExplanation = styled.p`
 margin: 0;
 text-align: center;
-padding-top: 32px;
+padding: 32px 0 32px 0;
+font-size: 16px;
 `;
 
 const LayoutChart = styled.div`

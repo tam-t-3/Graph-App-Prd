@@ -51,6 +51,7 @@ const DisplayRecharts: React.FC = () => {
     <div className="App">
         <FormControl className={classes.formControl}>
           <InputLabel
+            style={{fontSize: "16px"}}
             id="demo-simple-select-label">
             {messages.Pagetop.select}
           </InputLabel>
