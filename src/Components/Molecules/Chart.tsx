@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
 import { sp, tab, pc } from "../../media";
+import { messages } from "../../Constants/Strings";
 
 type Props = {
   country?: string,
@@ -37,7 +38,7 @@ const Chart: React.FC<Props> = ({ country, model }) => {
         country && (
           <LayoutChartName>
             <h2>{country}</h2>
-            <button onClick={deleteHandler}>DELETE</button>
+            <button onClick={deleteHandler}>{messages.Pagetop.delete}</button>
           </LayoutChartName>
         )
       }

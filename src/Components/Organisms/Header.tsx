@@ -42,6 +42,7 @@ const ButtonAppBar = () => {
 };
 
 const TitleLayout = styled.span`
+  font-size: 20px;
   padding: 8px;
 `;
 

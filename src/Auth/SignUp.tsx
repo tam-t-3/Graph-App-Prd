@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import  { Button, TextField } from "@material-ui/core";
 import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
-import { navigation } from "../Constants/Strings";
+import { navigation, aboutTxt } from "../Constants/Strings";
 
 const SignUp: React.FC = () => {
   const { signup } = useContext(AuthContext);
@@ -25,12 +25,12 @@ const SignUp: React.FC = () => {
 
   return (
     <div className="c-section-container">
-      <h1 className="u-text-center u-text__headline">SignUp</h1>
+      <h1 className="u-text-center u-text__headline">{navigation.signUp}</h1>
       <div className="module-spacer--medium"/>
 
       <form onSubmit={handleSubmit}>
         <label>
-          <TextField fullWidth={true} id="standard-basic" label="Email"
+          <TextField fullWidth={true} id="standard-basic" label={aboutTxt.mail}
             name="email"
             type="email"
             value={email}
@@ -39,7 +39,7 @@ const SignUp: React.FC = () => {
           />
         </label>
         <label>
-          <TextField fullWidth={true} id="standard-basic" label="Password"
+          <TextField fullWidth={true} id="standard-basic" label={aboutTxt.password}
           name="password"
           type="password"
           value={password}

@@ -20,7 +20,7 @@ const AppBarMenu = () => {
   return (
     <div >
       <Button
-        style={{color: "white"}}
+        style={{color: "white", fontSize: "16px"}}
         aria-controls="simple-meny"
         aria-haspopup="true"
         onClick={handleClick}
@@ -36,14 +36,14 @@ const AppBarMenu = () => {
           onClose={handleClose}
         >
           <Link style={{ textDecoration: "none", color: "black"}} to="signup">
-            <MenuItem onClick={handleClose}>{navigation.signUp}</MenuItem>
+            <MenuItem style={{fontSize: "16px"}} onClick={handleClose}>{navigation.signUp}</MenuItem>
           </Link>
 
           <Link style={{ textDecoration: "none", color: "black"}} to="logIn">
-            <MenuItem onClick={handleClose}>{navigation.logIn}</MenuItem>
+            <MenuItem style={{fontSize: "16px"}} onClick={handleClose}>{navigation.logIn}</MenuItem>
           </Link>
 
-          <MenuItem onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem>
+          <MenuItem style={{fontSize: "16px"}} onClick={() => app.auth().signOut()}>{navigation.logOut}</MenuItem>
         </Menu>
     </div>
   )

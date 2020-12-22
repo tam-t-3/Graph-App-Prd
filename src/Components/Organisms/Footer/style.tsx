@@ -13,6 +13,7 @@ export const Layout = styled.div`
 
 export const StyledCopy = styled.span`
   margin-right: 16px;
+  font-size: 14px;
 `;
 
 export const StyledIcons = styled.div`

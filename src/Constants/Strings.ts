@@ -1,6 +1,6 @@
 export const navigation = {
   menu: "メニュー",
-  signUp: "登録する",
+  signUp: "アカウント登録",
   logIn: "ログイン",
   logOut: "ログアウト"
 };
@@ -16,6 +16,7 @@ export const messages = {
     titleTop: "トップページ",
     explanation: "プルダウンで選択した地域のグラフが表示されます",
     select: "地域を選択してください",
+    delete: "一覧から削除",
   },
   appName: "",
   copyRight: " 2020 Takashi Tamura",
