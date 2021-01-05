@@ -65,6 +65,7 @@ const DisplayRecharts: React.FC = () => {
             <MenuItem value="">地域を選択する</MenuItem>
             <MenuItem value="Japan">Japan</MenuItem>
             <MenuItem value="China">China</MenuItem>
+            <MenuItem value="Italy">Italy</MenuItem>
           </Select>
           
           <LayoutChart>

@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const FaIconTemplate = (props: any) => {
   const iconStyle: React.CSSProperties = { 
     padding: 0,
-    fontSize: 16
+    fontSize: 16,
+    color: "#262525",
   };
 
   return (
