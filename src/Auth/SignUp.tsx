@@ -51,7 +51,7 @@ const SignUp: React.FC = () => {
         <div className="module-spacer--medium"/>
 
         <div className="center">
-  <Button size="small" variant="outlined" type="submit">{navigation.signUp}</Button>
+  <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.signUp}</Button>
         </div>
     </form>
   </div>

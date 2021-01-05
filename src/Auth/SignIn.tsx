@@ -15,6 +15,12 @@ const SignIn = () => {
     login(email, password);
   };
 
+  //テストユーザーログイン
+  const handleSubmitTestUser = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    login("example@example.com", "example12320");
+  };
+
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
@@ -50,7 +56,14 @@ const SignIn = () => {
       <div className="module-spacer--medium"/>
 
       <div className="center">
-        <Button size="small" variant="outlined" type="submit">{navigation.logIn}</Button>
+        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.logIn}</Button>
+      </div>
+    </form>
+
+    <form onSubmit={handleSubmitTestUser}>
+      <div className="module-spacer--extra-small"/>
+      <div className="center">
+        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.testSignIn}</Button>
       </div>
     </form>
   </div>
