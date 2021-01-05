@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { messages } from "../../Constants/Strings";
 import Chart from "../Molecules/Chart";
 import DisplayRecharts from "../Molecules/DisplayRecharts";
 import { GraphState } from "../../Redux/Graph/types";
@@ -13,10 +12,6 @@ const Top: React.FC = () => {
   return (
     <LayoutTop>
       <div>
-        <LayoutExplanation>
-          {messages.Pagetop.explanation}
-        </LayoutExplanation>
-
         <LayoutChart>
           <DisplayRecharts />
         </LayoutChart>
@@ -34,20 +29,13 @@ const Top: React.FC = () => {
 };
 
 const LayoutTop = styled.div`
-width: 100%;
-padding-bottom: 80px;
-`;
-
-const LayoutExplanation = styled.p`
-margin: 0;
-text-align: center;
-padding: 32px 0 32px 0;
-font-size: 16px;
+  width: 100%;
+  padding: 64px 0 80px 0;
 `;
 
 const LayoutChart = styled.div`
-margin: 0 auto;
-display: inline;
+  margin: 0 auto;
+  display: inline;
 `;
 
 export default Top;

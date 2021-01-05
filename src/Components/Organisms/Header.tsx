@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      backgroundColor: "#262525",
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -28,8 +29,7 @@ const ButtonAppBar = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <TitleLayout>{aboutTxt.appName}</TitleLayout>
@@ -37,11 +37,11 @@ const ButtonAppBar = () => {
           <AppBarMenu />
         </Toolbar>
       </AppBar>
-    </div>
   )
 };
 
 const TitleLayout = styled.span`
+  color: #61dafb;
   font-size: 20px;
   padding: 8px;
 `;
