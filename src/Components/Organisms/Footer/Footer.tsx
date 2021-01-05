@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
       </S.StyledCopy>
 
       <a
-      href="mailto:takashi.t.abc.20@gmail.com"
-      target="_blank">
+        href="mailto:takashi.t.abc.20@gmail.com"
+        target="_blank">
         <FaIconTemplate iconName={faEnvelope}/>
-        </a>
+      </a>
     </S.Layout>
   )
 }

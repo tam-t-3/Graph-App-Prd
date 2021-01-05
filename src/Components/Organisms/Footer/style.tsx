@@ -12,6 +12,7 @@ export const Layout = styled.div`
 `;
 
 export const StyledCopy = styled.span`
+  color: #262525;
   margin-right: 16px;
   font-size: 14px;
 `;
@@ -26,6 +27,5 @@ export const StyledIcon = styled.a`
 `;
 
 export const StyeledMail = styled.a`
-  color:black;
-  text-decoration: none;
+  text-decoration: none
 `;
