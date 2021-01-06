@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
-import { navigation, aboutTxt } from "../Constants/Strings";
+import { navigation, aboutTxt, testUser } from "../Constants/Strings";
 
 const SignIn = () => {
   const { login } = useContext(AuthContext);
@@ -18,7 +18,8 @@ const SignIn = () => {
   //テストユーザーログイン
   const handleSubmitTestUser = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    login("example@example.com", "example12320");
+    
+    login(testUser.email, testUser.password);
   };
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
