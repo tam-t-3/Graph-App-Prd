@@ -12,6 +12,7 @@ import { CombineReducerType } from "../../Redux/reducer";
 import Button from "../Atoms/AppBarMenu/Button";
 import { sp } from "../../media";
 import styled from "styled-components";
+import imgLoading from "../../Assets/loading.gif";
 
 
 const useStyles = makeStyles((theme: Theme) => 
@@ -30,6 +31,7 @@ const DisplayRecharts: React.FC = () => {
   const dispatch = useDispatch();
   const [country, setCountry] = useState<string>('');
   const selectedModel = useSelector((state: CombineReducerType) => state.country.selectedCountryData)
+  const isLoading = useSelector((state: CombineReducerType) => state.country.isLoading)
  
   const changeHandler = (e: any) => {
     setCountry(e.target.value)
@@ -69,13 +71,15 @@ const DisplayRecharts: React.FC = () => {
           </Select>
           
           <LayoutChart>
-            <Chart model={selectedModel}/>
+            {isLoading ? <img src={imgLoading} alt="loading"/>
+                  : <Chart model={selectedModel} />
+            }          
           </LayoutChart>
 
           <Button clickHandler={submitHandler}>
             <span>グラフを一覧へ追加</span>
           </Button>
-        </FormControl>        
+        </FormControl>
     </div>
   )
 }

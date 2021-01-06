@@ -24,6 +24,7 @@ const graphReducer: Reducer<GraphState, GraphActionType> = (
         ...state,
         selectedCountryName: action.payload.country,
         selectedCountryData: action.payload.values,
+        isLoading: false,
       }
     case ADDCOUNTRY:
       const values = state.selectedCountryData
