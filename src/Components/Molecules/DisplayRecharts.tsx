@@ -64,7 +64,6 @@ const DisplayRecharts: React.FC = () => {
             onChange={changeHandler}
             name="selectlink"
           >
-            <MenuItem value="">地域を選択する</MenuItem>
             <MenuItem value="Japan">Japan</MenuItem>
             <MenuItem value="China">China</MenuItem>
             <MenuItem value="Italy">Italy</MenuItem>
