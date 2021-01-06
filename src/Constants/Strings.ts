@@ -21,3 +21,8 @@ export const messages = {
   appName: "",
   copyRight: " 2020 Takashi Tamura",
 } 
+
+export const testUser = {
+  email: "example@example.com",
+  password: "example12320"
+}
