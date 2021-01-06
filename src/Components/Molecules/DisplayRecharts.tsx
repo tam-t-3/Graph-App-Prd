@@ -43,7 +43,7 @@ const DisplayRecharts: React.FC = () => {
       dispatch(GraphActions.AddCountry(country))
     } else {
       alert("地域を選択して下さい");
-      return false;
+      return;
     }
   };
 
