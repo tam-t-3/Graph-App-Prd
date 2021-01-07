@@ -4,6 +4,11 @@ import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
 import { navigation, aboutTxt, testUser } from "../Constants/Strings";
 
+const Style: React.CSSProperties = { 
+  color: "white",
+  background: "#262525",
+};
+
 const SignIn = () => {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -64,7 +69,7 @@ const SignIn = () => {
     <form onSubmit={handleSubmitTestUser}>
       <div className="module-spacer--extra-small"/>
       <div className="center">
-        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.testSignIn}</Button>
+        <Button size="small" variant="contained" type="submit"  fullWidth={true} style={Style}>{navigation.testSignIn}</Button>
       </div>
     </form>
   </div>
