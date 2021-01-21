@@ -8,6 +8,8 @@ type Context = {
   signup: Signup;
   currentUser: any | null;
 };
+type Login = (email: string, password: string) => Promise<void>;
+type Signup = (email: string, password: string) => Promise<void>;
 
 // contextの作成
 export const AuthContext = React.createContext<Context>({

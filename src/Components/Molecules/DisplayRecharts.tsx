@@ -1,28 +1,26 @@
 import React, { useState } from "react";
-import Chart from "./Chart";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import { messages } from "../../Constants/Strings";
-import { useDispatch, useSelector } from "react-redux";
-import { GraphActions } from "../../Redux/Graph/action";
-import { CombineReducerType } from "../../Redux/reducer";
 import Button from "../Atoms/Button";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import Chart from "./Chart";
+import { CombineReducerType } from "../../Redux/reducer";
+import FormControl from "@material-ui/core/FormControl";
+import { GraphActions } from "../../Redux/Graph/action";
+import imgLoading from "../../Assets/loading.gif";
+import InputLabel from "@material-ui/core/InputLabel";
+import { messages } from "../../Constants/Strings";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
 import { sp } from "../../media";
 import styled from "styled-components";
-import imgLoading from "../../Assets/loading.gif";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const useStyles = makeStyles((theme: Theme) => 
   createStyles({
     formControl: {
-      // margin: theme.spacing(1),
       minWidth: 200,
     },
     selectEmpty: {
-      // marginTop: theme.spacing(2),
     },
   }),
 );

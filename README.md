@@ -16,7 +16,7 @@
 ### 使い方
 yarn install
 yarn start
-テストユーザーログインボタンから利用いただけます。
+テストユーザーログインボタンから利用できます。
 
 # Getting Started with Create React App
 

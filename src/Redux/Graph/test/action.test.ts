@@ -58,24 +58,4 @@ describe("actionのテスト", () => {
     const actual = GraphActions.DelCountry(country)
     expect(actual).toStrictEqual(action) 
   })
-
-  test("DeleteUpdateアクションのテスト", () => {
-    const country = "japan"
-    const values = {"japan": [{
-      Age: "",
-      Country: country,
-      Population: 1000,
-      Year: 2020,
-      docId: ""
-    }]}
-    const action = {
-      type: DELETE_UPDATE,
-      payload: {
-        country
-      }
-    }
-    const actual = GraphActions.DeleteUpdate(values)
-    expect(actual).toStrictEqual(action)
-  })
-
 })

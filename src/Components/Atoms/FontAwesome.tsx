@@ -8,6 +8,7 @@ const IconTemplate = (props: any) => {
     color: "#262525",
   };
 
+  //Icon情報を流し込むためのコンポーネント
   return (
     <FontAwesomeIcon
       style={iconStyle}

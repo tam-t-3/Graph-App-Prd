@@ -9,7 +9,7 @@ function CanvasGraphs(props: any) {
     return canvas.getContext('2d');
   };
 
-  console.log(props.population);//渡ってきた
+  console.log(props.population);
   console.log( typeof props.population);
    
   useEffect(() => {
