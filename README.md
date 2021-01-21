@@ -24,9 +24,10 @@
  ユーザー単位で取得したデータを永続化
 
 ### 使い方
-yarn install  
-yarn start  
+`yarn install`  
+`yarn start`  
 テストユーザーログインボタンから利用できます。
+
 
 # Getting Started with Create React App
 
