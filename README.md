@@ -6,29 +6,27 @@
 
 ## Overview
  選択した地域の人口数をグラフで表示できます。
- 
-## Language
- JavaScript(React) / TypeScript / JSX 
 
 ## URL
  https://basic-population.web.app/
 
 ## 実装した機能
  ユーザー認証 (Firebase Authentication)
- グラフ一覧へのグラフ追加、削除
- レスポンシブデザイン
+ グラフの一覧追加、削除
+ レスポンシブ対応
  
 ## 技術
  React, Redux, react-router, react-helmet, Firebase Hosting  
  Cloud Firestore, Firebase Authentication
 
 ## こだわり
- 
+ Cloud Firestoreからデータ取得
+ ユーザー単位で取得したデータを永続化
 
 ### 使い方
 yarn install
 yarn start
-テストユーザーログインボタンから利用いただけます。
+テストユーザーログインボタンから利用できます。
 
 # Getting Started with Create React App
 
