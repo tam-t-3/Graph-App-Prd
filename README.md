@@ -1,3 +1,14 @@
+### アプリケーション名: Popuraph
+
+### サービスの説明: 選択した地域の人口数をグラフで表示します。
+
+### Firebase Authentication を利用してますが、テストユーザーログインからログインできます。
+
+React react@17.0.1
+Redux redux@4.0.5
+
+### 実装した機能 ユーザー認証 (Firebase Authentication)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
