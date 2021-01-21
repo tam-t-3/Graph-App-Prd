@@ -11,8 +11,8 @@
  https://basic-population.web.app/
 
 ## 実装した機能
- ユーザー認証 (Firebase Authentication)
- グラフの一覧追加、削除
+ ユーザー認証 (Firebase Authentication)  
+ グラフの一覧追加、削除  
  レスポンシブ対応
  
 ## 技術
