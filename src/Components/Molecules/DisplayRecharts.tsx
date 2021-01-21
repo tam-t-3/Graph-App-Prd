@@ -9,7 +9,7 @@ import { messages } from "../../Constants/Strings";
 import { useDispatch, useSelector } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
 import { CombineReducerType } from "../../Redux/reducer";
-import Button from "../Atoms/AppBarMenu/Button";
+import Button from "../Atoms/Button";
 import { sp } from "../../media";
 import styled from "styled-components";
 import imgLoading from "../../Assets/loading.gif";

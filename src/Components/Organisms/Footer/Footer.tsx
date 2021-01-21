@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 import { messages } from "../../../Constants/Strings";
-import FaIconTemplate from "../../Atoms/FaIcons/FaIconTemplate";
+import FaIconTemplate from "../../Atoms/FontAwesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer: React.FC = () => {  
