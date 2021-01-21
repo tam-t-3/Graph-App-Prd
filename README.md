@@ -1,7 +1,7 @@
 ## Name: Popuraph
 
  react@17.0.1  
- react-redux@4.0.5
+ react-redux@4.0.5  
  firebase@8.1.2
 
 ## Overview
