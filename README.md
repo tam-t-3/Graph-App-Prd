@@ -1,7 +1,7 @@
 ## Name: Popuraph
 
-React react@17.0.1
-Redux redux@4.0.5
+react@17.0.1  
+redux@4.0.5
 
 ## Overview: 選択した地域の人口数をグラフで表示できます。
 ## URL
