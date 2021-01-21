@@ -1,6 +1,6 @@
 import { Reducer } from "react";
-import { GraphState, SELECT_UPDATE, SELECTCOUNTRY, ADDCOUNTRY, SUCCESS_LOAD, DELETE_UPDATE } from "./types";
 import { GraphActionType } from "./action";
+import { GraphState, SELECT_UPDATE, SELECTCOUNTRY, ADDCOUNTRY, SUCCESS_LOAD, DELETE_UPDATE } from "./types";
 
 const initState: GraphState = {
   selectedCountryName: "",

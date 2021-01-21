@@ -1,3 +1,23 @@
+## Name: Popuraph
+
+ react@17.0.1  
+ redux@4.0.5
+
+## Overview
+ 選択した地域の人口数をグラフで表示できます。
+## URL
+ https://basic-population.web.app/
+
+## 実装した機能
+ ユーザー認証 (Firebase Authentication)
+ グラフ一覧へのグラフ追加、削除
+ レスポンシブデザイン
+
+### 使い方
+yarn install
+yarn start
+テストユーザーログインボタンから利用できます。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import Header from "../Organisms/Header";
 import Footer from "../Organisms/Footer/Footer";
+import { GraphActions } from "../../Redux/Graph/action";
+import Header from "../Organisms/Header";
 import Top from "../Organisms/Top";
 import { useDispatch } from "react-redux";
-import { GraphActions } from "../../Redux/Graph/action";
+
 
 const Contents: React.FC = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,10 @@
 import React from "react";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import styled from "styled-components";
-import { useDispatch } from "react-redux";
 import { GraphActions } from "../../Redux/Graph/action";
+import { LineChart, Line, CartesianGrid,
+  XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import styled from "styled-components";
 import { sp, tab, pc } from "../../media";
+import { useDispatch } from "react-redux";
 import { messages } from "../../Constants/Strings";
 
 type Props = {

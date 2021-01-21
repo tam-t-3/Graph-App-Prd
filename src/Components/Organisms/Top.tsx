@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import Chart from "../Molecules/Chart";
 import DisplayRecharts from "../Molecules/DisplayRecharts";
 import { GraphState } from "../../Redux/Graph/types";
+import styled from "styled-components";
 import {useSelector } from "react-redux";
 
 const Top: React.FC = () => {
