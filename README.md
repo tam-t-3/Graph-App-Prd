@@ -1,10 +1,15 @@
 ## Name: Popuraph
 
  react@17.0.1  
- redux@4.0.5
+ react-redux@4.0.5
+ firebase@8.1.2
 
 ## Overview
  選択した地域の人口数をグラフで表示できます。
+ 
+## Language
+ JavaScript(React) / TypeScript / JSX 
+
 ## URL
  https://basic-population.web.app/
 
@@ -12,6 +17,13 @@
  ユーザー認証 (Firebase Authentication)
  グラフ一覧へのグラフ追加、削除
  レスポンシブデザイン
+ 
+## 技術
+ React, Redux, react-router, react-helmet, Firebase Hosting  
+ Cloud Firestore, Firebase Authentication
+
+## こだわり
+ 
 
 ### 使い方
 yarn install
