@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
 import { navigation, aboutTxt, testUser } from "../Constants/Strings";
+import { withRouter } from "react-router";
 
 const Style: React.CSSProperties = { 
   color: "white",
@@ -20,7 +20,7 @@ const SignIn = () => {
     login(email, password);
   };
 
-  //テストユーザーログイン
+  //テストユーザーでログインさせる
   const handleSubmitTestUser = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
@@ -37,9 +37,11 @@ const SignIn = () => {
 
   return (
     <div className="c-section-container">
+
       <h1 className="u-text-center u-text__headline">{navigation.logIn}</h1>
       
       <div className="module-spacer--medium"/>
+
       <form onSubmit={handleSubmit}>
         <label>
           <TextField fullWidth={true} label={aboutTxt.mail} style={{fontSize: "16px"}}
@@ -59,11 +61,13 @@ const SignIn = () => {
             onChange={handlePassword}
           />
         </label>
+
       <div className="module-spacer--medium"/>
 
       <div className="center">
         <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.logIn}</Button>
       </div>
+      
     </form>
 
     <form onSubmit={handleSubmitTestUser}>

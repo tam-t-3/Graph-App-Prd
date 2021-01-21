@@ -7,7 +7,7 @@ export const navigation = {
 };
 
 export const aboutTxt = {
-  appName: "Population-Graph-App",
+  appName: "Popuraph",
   mail: "メールアドレス",
   password: "パスワード"
 };
@@ -18,7 +18,6 @@ export const messages = {
     select: "地域を選択してください",
     delete: "一覧から削除",
   },
-  appName: "",
   copyRight: " 2020 Takashi Tamura",
 } 
 

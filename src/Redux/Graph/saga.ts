@@ -1,10 +1,8 @@
-import { takeEvery, put, call, select } from "redux-saga/effects";
-import { SELECTCOUNTRY, ADDCOUNTRY, LOAD, DELCOUNTRY, UserDataType, } from "./types";
-import { GraphActionType, GraphActions } from "./action";
-import { db, auth } from "../../Firebase/base";
 import { CombineReducerType } from "../reducer";
-
-//type FirebaseDoc = firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>
+import { db, auth } from "../../Firebase/base";
+import { GraphActionType, GraphActions } from "./action";
+import { SELECTCOUNTRY, ADDCOUNTRY, LOAD, DELCOUNTRY, UserDataType, } from "./types";
+import { takeEvery, put, call, select } from "redux-saga/effects";
 
 function* graphSaga() {
   yield takeEvery(SELECTCOUNTRY, calcSelectCountry);
@@ -107,7 +105,7 @@ const requestUpdate = async (country: string) => {
 }
 
 /**
- * 未リファクタリング 
+ * リファクタリング予定
  * @param country
  * 
  */

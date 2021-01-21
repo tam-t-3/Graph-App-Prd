@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import { Router, Route, Switch } from "react-router-dom";
-import Contents from "./Components/Pages/Contents";
-import { createBrowserHistory } from "history";
-import Login from "./Auth/SignIn";
-import SignUp from "./Auth/SignUp";
-import { Provider } from "react-redux";
-import store from "./Redux";
 import { AuthProvider } from './Auth/AuthProvider';
+import { createBrowserHistory } from "history";
+import Contents from "./Components/Pages/Contents";
+import Login from "./Auth/SignIn";
 import PrivateRoute from "./Auth/PrivateRoute";
+import { Provider } from "react-redux";
+import { Router, Route, Switch } from "react-router-dom";
+import store from "./Redux";
+import SignUp from "./Auth/SignUp";
 
 export const history = createBrowserHistory();
 

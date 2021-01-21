@@ -1,13 +1,13 @@
 import React from "react";
+import { aboutTxt } from "../../Constants/Strings";
+import AppBar from '@material-ui/core/AppBar';
+import AppBarMenu from "../Molecules/AppBarMenu";
 import { 
   createStyles,
   makeStyles,
   Theme } from "@material-ui/core/styles";
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import AppBarMenu from "../Atoms/AppBarMenu/AppBarMenu";
-import { aboutTxt } from "../../Constants/Strings";
 import styled from "styled-components";
+import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 
 const useStyles = makeStyles((theme: Theme) => 
@@ -32,7 +32,7 @@ const ButtonAppBar = () => {
       <AppBar position="static" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <TitleLayout>{aboutTxt.appName}</TitleLayout>
+            <LayoutAppTitle>{aboutTxt.appName}</LayoutAppTitle>
           </Typography>
           <AppBarMenu />
         </Toolbar>
@@ -40,7 +40,7 @@ const ButtonAppBar = () => {
   )
 };
 
-const TitleLayout = styled.span`
+const LayoutAppTitle = styled.span`
   color: #61dafb;
   font-size: 20px;
   padding: 8px;
