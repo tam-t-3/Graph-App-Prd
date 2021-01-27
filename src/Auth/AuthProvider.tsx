@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { app } from "../Firebase/base";
-import { history } from "../App";
 import { db } from "../Firebase/base";
-
-type Login = (email: string, password: string) => Promise<void>;
-type Signup = (email: string, password: string) => Promise<void>;
+import { history } from "../App";
 
 type Context = {
   login: Login;
   signup: Signup;
   currentUser: any | null;
 };
+type Login = (email: string, password: string) => Promise<void>;
+type Signup = (email: string, password: string) => Promise<void>;
 
 // contextの作成
 export const AuthContext = React.createContext<Context>({

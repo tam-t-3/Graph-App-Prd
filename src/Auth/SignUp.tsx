@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import  { Button, TextField } from "@material-ui/core";
-import { withRouter } from "react-router";
 import { AuthContext } from "./AuthProvider";
+import  { Button, TextField } from "@material-ui/core";
 import { navigation, aboutTxt } from "../Constants/Strings";
+import { withRouter } from "react-router";
 
 const SignUp: React.FC = () => {
   const { signup } = useContext(AuthContext);
@@ -26,6 +26,7 @@ const SignUp: React.FC = () => {
   return (
     <div className="c-section-container">
       <h1 className="u-text-center u-text__headline">{navigation.signUp}</h1>
+
       <div className="module-spacer--medium"/>
 
       <form onSubmit={handleSubmit}>
@@ -51,7 +52,8 @@ const SignUp: React.FC = () => {
         <div className="module-spacer--medium"/>
 
         <div className="center">
-  <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.signUp}</Button>
+
+        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.signUp}</Button>
         </div>
     </form>
   </div>

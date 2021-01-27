@@ -1,11 +1,12 @@
 import React from "react";
+import { app } from "../../Firebase/base";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import { navigation } from "../../../Constants/Strings";
-import { Link } from "react-router-dom";
-import { app } from "../../../Firebase/base";
+import { navigation } from "../../Constants/Strings";
 
+// Material-ui <Header>
 const AppBarMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
