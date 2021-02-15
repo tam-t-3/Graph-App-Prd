@@ -105,7 +105,6 @@ const requestUpdate = async (country: string) => {
 }
 
 /**
- * リファクタリング予定
  * @param country
  * 
  */
