@@ -3,6 +3,7 @@ import { AuthContext } from "./AuthProvider";
 import { Button, TextField } from "@material-ui/core";
 import { navigation, aboutTxt, testUser } from "../Constants/Strings";
 import { withRouter } from "react-router";
+import styled from "styled-components";
 
 const Style: React.CSSProperties = { 
   color: "white",
@@ -52,14 +53,25 @@ const SignIn = () => {
             placeholder="メールアドレス"
           />
         </label>
+
+        <div className="module-spacer--medium"/>
+
         <label>
-          <TextField fullWidth={true} label={aboutTxt.password}
-            name="password"
-            type="password"
-            value={password}
-            placeholder="パスワード"
-            onChange={handlePassword}
-          />
+          <TextFieldborder>
+            <TextField fullWidth={true} label={aboutTxt.password}
+                variant="outlined"
+                name="password"
+                type="password"
+                value={password}
+                placeholder="パスワード"
+                onChange={handlePassword}
+                inputProps={{
+                  style: {
+                    padding: 5
+                  }
+               }}
+              />
+          </TextFieldborder>
         </label>
 
       <div className="module-spacer--medium"/>
@@ -79,5 +91,9 @@ const SignIn = () => {
   </div>
   )
 }
+
+const TextFieldborder = styled.div`
+  
+`
 
 export default withRouter(SignIn);
