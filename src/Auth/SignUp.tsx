@@ -4,6 +4,12 @@ import  { Button, TextField } from "@material-ui/core";
 import { navigation, aboutTxt } from "../Constants/Strings";
 import { withRouter } from "react-router";
 
+const Style: React.CSSProperties = { 
+  color: "#262525",
+  background: "",
+  padding: "16px",
+};
+
 const SignUp: React.FC = () => {
   const { signup } = useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -32,20 +38,25 @@ const SignUp: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <label>
           <TextField fullWidth={true} id="standard-basic" label={aboutTxt.mail}
+            variant="outlined"
             name="email"
             type="email"
             value={email}
             onChange={handleEmail}
-            placeholder="メールアドレスを入力してください"
+            placeholder="メールアドレス"
           />
         </label>
+
+        <div className="module-spacer--extra-small"/>
+
         <label>
           <TextField fullWidth={true} id="standard-basic" label={aboutTxt.password}
+          variant="outlined"
           name="password"
           type="password"
           value={password}
           onChange={handlePassword}
-          placeholder="パスワードを設定してください"
+          placeholder="パスワード"
           />
         </label>
 
@@ -53,7 +64,9 @@ const SignUp: React.FC = () => {
 
         <div className="center">
 
-        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.signUp}</Button>
+        <Button size="small" variant="outlined" type="submit" fullWidth={true}
+          style={Style}
+        >{navigation.signUp}</Button>
         </div>
     </form>
   </div>
