@@ -6,8 +6,9 @@ import { withRouter } from "react-router";
 import styled from "styled-components";
 
 const Style: React.CSSProperties = { 
-  color: "white",
-  background: "#262525",
+  color: "#262525",
+  background: "",
+  padding: "16px",
 };
 
 const SignIn = () => {
@@ -45,16 +46,19 @@ const SignIn = () => {
 
       <form onSubmit={handleSubmit}>
         <label>
-          <TextField fullWidth={true} label={aboutTxt.mail} style={{fontSize: "16px"}}
-            name="email"
-            type="email"
-            value={email}
-            onChange={handleEmail}
-            placeholder="メールアドレス"
-          />
+          <TextFieldborder>
+            <TextField fullWidth={true} label={aboutTxt.mail} style={{fontSize: "16px"}}
+              variant="outlined"
+              name="email"
+              type="email"
+              value={email}
+              onChange={handleEmail}
+              placeholder="メールアドレス"
+            />
+          </TextFieldborder>
         </label>
 
-        <div className="module-spacer--medium"/>
+        <div className="module-spacer--extra-small"/>
 
         <label>
           <TextFieldborder>
@@ -67,9 +71,9 @@ const SignIn = () => {
                 onChange={handlePassword}
                 inputProps={{
                   style: {
-                    padding: 5
+                    padding: 16
                   }
-               }}
+                }}
               />
           </TextFieldborder>
         </label>
@@ -77,7 +81,7 @@ const SignIn = () => {
       <div className="module-spacer--medium"/>
 
       <div className="center">
-        <Button size="small" variant="outlined" type="submit" fullWidth={true}>{navigation.logIn}</Button>
+        <Button size="small" variant="outlined" type="submit" fullWidth={true} style={Style}>{navigation.logIn}</Button>
       </div>
       
     </form>
@@ -92,8 +96,6 @@ const SignIn = () => {
   )
 }
 
-const TextFieldborder = styled.div`
-  
-`
+const TextFieldborder = styled.div``
 
 export default withRouter(SignIn);
