@@ -89,7 +89,7 @@ const SignIn = () => {
     <form onSubmit={handleSubmitTestUser}>
       <div className="module-spacer--extra-small"/>
       <div className="center">
-        <Button size="small" variant="contained" type="submit"  fullWidth={true} style={Style}>{navigation.testSignIn}</Button>
+        <Button size="small" variant="contained" type="submit"  fullWidth={true} style={Style}>{navigation.guestSignIn}</Button>
       </div>
     </form>
   </div>

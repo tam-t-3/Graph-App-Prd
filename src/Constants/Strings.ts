@@ -1,7 +1,7 @@
 export const navigation = {
   menu: "メニュー",
-  signUp: "登録する",
-  testSignIn: "テストユーザーログイン",
+  signUp: "アカウント登録",
+  guestSignIn: "ゲストユーザー ログイン",
   logIn: "ログイン",
   logOut: "ログアウト"
 };
