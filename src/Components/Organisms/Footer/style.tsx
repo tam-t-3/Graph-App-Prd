@@ -26,6 +26,6 @@ export const StyledIcon = styled.a`
   margin-right: 16px;
 `;
 
-export const StyeledMail = styled.a`
+export const StyledMail = styled.a`
   text-decoration: none
 `;

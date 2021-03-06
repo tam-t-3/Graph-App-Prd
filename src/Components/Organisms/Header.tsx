@@ -41,8 +41,7 @@ const ButtonAppBar = () => {
 };
 
 const LayoutAppTitle = styled.span`
-  color: #61dafb;
-  font-size: 20px;
+  font-size: 24px;
   padding: 8px;
 `;
 
