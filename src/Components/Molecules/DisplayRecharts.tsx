@@ -10,7 +10,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import { messages } from "../../Constants/Strings";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import { sp } from "../../media";
+import { sp, tab, pc } from "../../media";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -83,8 +83,14 @@ const DisplayRecharts: React.FC = () => {
 
 const LayoutChart = styled.div`
   ${sp`
-    width: 450px;
+    width: 350px;
     box-sizing: boder-box;
+  `}
+  ${tab`
+    width: 500px;
+  `}
+  ${pc`
+    width: 800px;
   `}
 `;
 
