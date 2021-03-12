@@ -83,7 +83,7 @@ const DisplayRecharts: React.FC = () => {
 
 const LayoutChart = styled.div`
   ${sp`
-    width: 450px;
+    width: 100%;
     box-sizing: boder-box;
   `}
 `;

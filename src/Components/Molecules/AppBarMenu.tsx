@@ -19,7 +19,7 @@ const AppBarMenu = () => {
   };
 
   return (
-    <div >
+    <div style ={{width:"100%"}}>
       <Button
         style={{color: "white", fontSize: "16px"}}
         aria-controls="simple-meny"
