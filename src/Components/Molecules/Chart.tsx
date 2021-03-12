@@ -56,8 +56,7 @@ const StyleChart = styled.div`
     box-sizing: boder-box;
   `}
   ${tab`
-    width: 100%;
-
+    width: 500px;
   `}
   ${pc`
     width: 800px;
